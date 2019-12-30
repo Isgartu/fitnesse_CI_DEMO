@@ -103,7 +103,7 @@ public class HistoryComparerTest {
   public void shouldBeAbleToFindMatchScoreByFirstIndexAndReturnAPercentString() throws Exception {
     comparer.matchedTables.add(new HistoryComparer.MatchedPair(1, 2, 1.1));
     comparer.matchedTables.add(new HistoryComparer.MatchedPair(3, 4, 1.0));
-    assertSubString("91.67",comparer.findScoreByFirstTableIndexAsStringAsPercent(1));
+    assertSubString("91,67",comparer.findScoreByFirstTableIndexAsStringAsPercent(1));
     assertSubString("83.33",comparer.findScoreByFirstTableIndexAsStringAsPercent(3));
   }
 
