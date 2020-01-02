@@ -60,7 +60,7 @@ public class DefaultInteractionTest {
   public void canExecuteConstructorWhenDoubleArgType() throws Throwable {
     //given 
     DefaultInteraction defaultInteraction = new DefaultInteraction();
-    Object args[] = new Object[]{"1", "2.0d"};
+    Object args[] = new Object[]{"1", "0.0d"};
     Constructor<?> constructor = defaultInteraction.getConstructor(Testee.class, args);
     //when
     Object convertedArgs[] = defaultInteraction.getConvertedConstructorArgsTypes(constructor, args);
@@ -74,7 +74,7 @@ public class DefaultInteractionTest {
   public void canExecuteConstructorWhenFloatArgType() throws Throwable {
     //given 
     DefaultInteraction defaultInteraction = new DefaultInteraction();
-    Object args[] = new Object[]{"1", "2.0f"};
+    Object args[] = new Object[]{"1", "0.0f"};
     Constructor<?> constructor = defaultInteraction.getConstructor(Testee.class, args);
     //when
     Object convertedArgs[] = defaultInteraction.getConvertedConstructorArgsTypes(constructor, args);
